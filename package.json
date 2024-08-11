@@ -1,0 +1,35 @@
+{
+  "name": "react-native-animated-swipe-button",
+  "version": "1.0.0",
+  "description": "A custom component of an animated swipe button",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "swipe",
+    "swipe",
+    "button",
+    "swipable",
+    "react native",
+    "typescript",
+    "animated"
+  ],
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*",
+    "react-native-reanimated": "*",
+    "react-native-gesture-handler": "*",
+    "expo-linear-gradient": "*"
+  },
+  "author": "Shelly Ambar",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShellyAmbar/react-native-animated-swipe-button.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShellyAmbar/react-native-animated-swipe-button/issues"
+  },
+  "homepage": "https://github.com/ShellyAmbar/react-native-animated-swipe-button#readme"
+}
