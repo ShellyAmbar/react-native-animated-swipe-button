@@ -1,4 +1,4 @@
-import {TextStyle, ViewStyle} from "react-native";
+import { TextStyle, ViewStyle } from "react-native";
 
 type SwipeButtonProps = {
   onToggle: (isToggled: boolean) => void;
@@ -11,6 +11,8 @@ type SwipeButtonProps = {
   buttonColors?: string[];
   textBeforeSwipeStyle?: TextStyle;
   textAfterSwipeStyle?: TextStyle;
+  textCheckIn?: string;
+  textCheckOut?: string;
 };
 
 type SwipeButtonStyleProps = {
@@ -22,4 +24,4 @@ type SwipeButtonStyleProps = {
   textBeforeSwipeStyle?: TextStyle;
   textAfterSwipeStyle?: TextStyle;
 };
-export {SwipeButtonProps, SwipeButtonStyleProps};
+export { SwipeButtonProps, SwipeButtonStyleProps };

@@ -1,9 +1,9 @@
 import React from "react";
-import {PanGestureHandler} from "react-native-gesture-handler";
+import { PanGestureHandler } from "react-native-gesture-handler";
 import Animated from "react-native-reanimated";
 import useSwipeButton from "./hooks/useSwipeButton";
-import {SwipeButtonProps} from "./interfaces";
-import {createStyles} from "./swipe-button.styles";
+import { SwipeButtonProps } from "./interfaces";
+import { createStyles } from "./swipe-button.styles";
 
 const SwipeButton = ({
   onToggle,
@@ -16,8 +16,10 @@ const SwipeButton = ({
   buttonColors = ["blue", "#FFFF"],
   textAfterSwipeStyle,
   textBeforeSwipeStyle,
+  textCheckIn = "Check IN!",
+  textCheckOut = "Check Out!",
 }: SwipeButtonProps) => {
-  const {AnimatedStyles, animatedGestureHandler, AnimatedLinearGradient} =
+  const { AnimatedStyles, animatedGestureHandler, AnimatedLinearGradient } =
     useSwipeButton({
       onToggle,
       isToggled,
@@ -41,18 +43,18 @@ const SwipeButton = ({
       <AnimatedLinearGradient
         style={[AnimatedStyles.colorWave, styles.colorWave]}
         colors={[gradiantColors[0], gradiantColors[1]]}
-        start={{x: 0, y: 1}}
-        end={{x: 1, y: 0}}
+        start={{ x: 0, y: 1 }}
+        end={{ x: 1, y: 0 }}
       ></AnimatedLinearGradient>
       <Animated.Text style={[styles.swipeTextOut, AnimatedStyles.swipeTextOut]}>
-        Checked In!
+        {textCheckOut}
       </Animated.Text>
 
       <PanGestureHandler onGestureEvent={animatedGestureHandler}>
         <Animated.View style={[styles.swipeable, AnimatedStyles.swipeable]} />
       </PanGestureHandler>
       <Animated.Text style={[styles.swipeText, AnimatedStyles.swipeText]}>
-        Swipe to Check IN!
+        {textCheckIn}
       </Animated.Text>
     </Animated.View>
   );

@@ -47,3 +47,5 @@ import SwipeButton from 'react-native-animated-swipe-button';
 | buttonColors?         | string[]                     |
 | textBeforeSwipeStyle? | TextStyle                    |
 | textAfterSwipeStyle?  | TextStyle                    |
+| textCheckIn?          | string                       |
+| textCheckOut?         | string                       |

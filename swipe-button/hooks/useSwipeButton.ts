@@ -1,4 +1,4 @@
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import Animated, {
   Extrapolate,
   interpolate,
@@ -9,7 +9,7 @@ import Animated, {
   useSharedValue,
   withSpring,
 } from "react-native-reanimated";
-import {LinearGradient} from "expo-linear-gradient";
+import { LinearGradient } from "expo-linear-gradient";
 import UseSwipeButtonProps from "./interfaces";
 
 const useSwipeButton = ({
@@ -103,7 +103,7 @@ const useSwipeButton = ({
           [0, BUTTON_WIDTH - SWIPEABLE_DIMENSIONS - BUTTON_PADDING],
           [buttonColors[0], buttonColors[1]]
         ),
-        transform: [{translateX: X.value}],
+        transform: [{ translateX: X.value }],
       };
     }),
     swipeText: useAnimatedStyle(() => {
@@ -139,7 +139,7 @@ const useSwipeButton = ({
             translateX: interpolate(
               X.value,
               InterpolateXInput,
-              [-BUTTON_WIDTH, SWIPEABLE_DIMENSIONS / 2],
+              [-BUTTON_WIDTH, SWIPEABLE_DIMENSIONS / 2 + BUTTON_PADDING],
               Extrapolate.CLAMP
             ),
           },

@@ -1,5 +1,5 @@
-import {StyleSheet} from "react-native";
-import {SwipeButtonStyleProps} from "./interfaces";
+import { StyleSheet } from "react-native";
+import { SwipeButtonStyleProps } from "./interfaces";
 const createStyles = ({
   height,
   width,
@@ -30,7 +30,7 @@ const createStyles = ({
       shadowRadius: 5,
 
       elevation: 1,
-      ...{...containerStyle},
+      ...{ ...containerStyle },
     },
     colorWave: {
       position: "absolute",
@@ -60,27 +60,25 @@ const createStyles = ({
     },
     swipeText: {
       alignSelf: "center",
-      fontSize: 18,
+      fontSize: height / 4,
       fontWeight: "bold",
       zIndex: 2,
       color: "#FFF",
-
       textShadowRadius: 20,
       textShadowOffset: {
         width: 0,
         height: 0,
       },
       elevation: 20,
-      ...{...textBeforeSwipeStyle},
+      ...{ ...textBeforeSwipeStyle },
     },
     swipeTextOut: {
       alignSelf: "center",
-      fontSize: 18,
+      fontSize: height / 4,
       fontWeight: "bold",
       zIndex: 3,
       textAlign: "center",
       color: "#FFF",
-
       textShadowColor: "#FFF",
       textShadowRadius: 20,
       textShadowOffset: {
@@ -88,7 +86,7 @@ const createStyles = ({
         height: 0,
       },
       elevation: 20,
-      ...{...textAfterSwipeStyle},
+      ...{ ...textAfterSwipeStyle },
     },
   });
-export {createStyles};
+export { createStyles };
